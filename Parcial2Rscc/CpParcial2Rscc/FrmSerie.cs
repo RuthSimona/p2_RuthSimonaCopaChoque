@@ -29,7 +29,7 @@ namespace CpParcial2Rscc
             var lista = SerieCln.ListarPa(txtParametro.Text.Trim());
             dgvLista.DataSource = lista;
             dgvLista.Columns["id"].Visible = false;
-            dgvLista.Columns["estado"].Visible = false; // Ocultar estado si no es necesario
+            dgvLista.Columns["estado"].Visible = false; 
             dgvLista.Columns["titulo"].HeaderText = "Título";
             dgvLista.Columns["sinopsis"].HeaderText = "Sinopsis";
             dgvLista.Columns["director"].HeaderText = "Director";
@@ -107,11 +107,13 @@ namespace CpParcial2Rscc
                 esValido = false;
                 erpEpisodios.SetError(nudEpisodios, "El campo Episodios debe ser mayor a 0");
             }
-            if (dtpFechaEstreno.Value > DateTime.Now)
+
+            if (dtpFechaEstreno.Value < DateTime.Now.Date)
             {
                 esValido = false;
-                erpFechaEstreno.SetError(dtpFechaEstreno, "La fecha de estreno no puede ser futura");
+                erpFechaEstreno.SetError(dtpFechaEstreno, "La fecha de estreno no puede ser en el pasado");
             }
+
             return esValido;
         }
 
@@ -125,7 +127,7 @@ namespace CpParcial2Rscc
                 serie.director = txtDirector.Text.Trim();
                 serie.episodios = (int)nudEpisodios.Value;
                 serie.fecha_estreno = dtpFechaEstreno.Value;
-                serie.estado = 1; 
+                serie.estado = 1;
 
                 if (esNuevo)
                 {
@@ -170,7 +172,7 @@ namespace CpParcial2Rscc
         }
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Close(); 
+            Close();
         }
     }
 }

@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\",
+  "WorkspaceRootPath": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|d:\\4to semestre\\sis457\\parcial2rscc\\parcial2rscc\\cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|solutionrelative:cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|d:\\4to semestre\\parcial2rscc\\p2_ruthsimonacopachoque\\parcial2rscc\\cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|solutionrelative:cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EC7A74E4-EEB0-408F-B5C6-A238A55CB70D}|ClnParcial2Rscc\\ClnParcial2Rscc.csproj|D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\clnparcial2rscc\\seriecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|solutionrelative:cpparcial2rscc\\frmserie.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EC7A74E4-EEB0-408F-B5C6-A238A55CB70D}|ClnParcial2Rscc\\ClnParcial2Rscc.csproj|D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\clnparcial2rscc\\seriecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EC7A74E4-EEB0-408F-B5C6-A238A55CB70D}|ClnParcial2Rscc\\ClnParcial2Rscc.csproj|solutionrelative:clnparcial2rscc\\seriecln.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\cpparcial2rscc\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\cpparcial2rscc\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{618A4378-86F8-4764-8582-94AE70D137CD}|CpParcial2Rscc\\CpParcial2Rscc.csproj|solutionrelative:cpparcial2rscc\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64334DFC-56DB-4BD6-8FB2-83FC07769168}|CadParcial2Rscc\\CadParcial2Rscc.csproj|D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\cadparcial2rscc\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{64334DFC-56DB-4BD6-8FB2-83FC07769168}|CadParcial2Rscc\\CadParcial2Rscc.csproj|D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\cadparcial2rscc\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{64334DFC-56DB-4BD6-8FB2-83FC07769168}|CadParcial2Rscc\\CadParcial2Rscc.csproj|solutionrelative:cadparcial2rscc\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
@@ -30,31 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "SerieCln.cs",
-              "DocumentMoniker": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\ClnParcial2Rscc\\SerieCln.cs",
+              "DocumentMoniker": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\ClnParcial2Rscc\\SerieCln.cs",
               "RelativeDocumentMoniker": "ClnParcial2Rscc\\SerieCln.cs",
-              "ToolTip": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\ClnParcial2Rscc\\SerieCln.cs",
+              "ToolTip": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\ClnParcial2Rscc\\SerieCln.cs",
               "RelativeToolTip": "ClnParcial2Rscc\\SerieCln.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAEwAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-02T22:41:47.617Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "FrmSerie.cs",
-              "DocumentMoniker": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs",
+              "DocumentMoniker": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs",
               "RelativeDocumentMoniker": "CpParcial2Rscc\\FrmSerie.cs",
-              "ToolTip": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs",
+              "ToolTip": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs",
               "RelativeToolTip": "CpParcial2Rscc\\FrmSerie.cs",
-              "ViewState": "AQIAAJcAAAAAAAAAAAAAwKsAAAAJAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAcwCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-03T03:43:41.145Z",
               "IsPinned": true,
@@ -62,41 +61,38 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "FrmSerie.cs [Dise\u00F1o]",
-              "DocumentMoniker": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs",
+              "DocumentMoniker": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs",
               "RelativeDocumentMoniker": "CpParcial2Rscc\\FrmSerie.cs",
-              "ToolTip": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs [Dise\u00F1o]",
+              "ToolTip": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CpParcial2Rscc\\FrmSerie.cs [Dise\u00F1o]",
               "RelativeToolTip": "CpParcial2Rscc\\FrmSerie.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T03:26:26.881Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2024-06-03T03:26:26.881Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "App.config",
-              "DocumentMoniker": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CpParcial2Rscc\\App.config",
+              "DocumentMoniker": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CpParcial2Rscc\\App.config",
               "RelativeDocumentMoniker": "CpParcial2Rscc\\App.config",
-              "ToolTip": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CpParcial2Rscc\\App.config",
+              "ToolTip": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CpParcial2Rscc\\App.config",
               "RelativeToolTip": "CpParcial2Rscc\\App.config",
               "ViewState": "AQIAAAIAAAAAAAAAAAAAwBMAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-03T03:22:53.293Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T03:22:53.293Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "App.Config",
-              "DocumentMoniker": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CadParcial2Rscc\\App.Config",
+              "DocumentMoniker": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CadParcial2Rscc\\App.Config",
               "RelativeDocumentMoniker": "CadParcial2Rscc\\App.Config",
-              "ToolTip": "D:\\4to Semestre\\sis457\\Parcial2Rscc\\Parcial2Rscc\\CadParcial2Rscc\\App.Config",
+              "ToolTip": "D:\\4to Semestre\\Parcial2Rscc\\p2_RuthSimonaCopaChoque\\Parcial2Rscc\\CadParcial2Rscc\\App.Config",
               "RelativeToolTip": "CadParcial2Rscc\\App.Config",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-06-03T03:22:43.337Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T03:22:43.337Z"
             }
           ]
         }
