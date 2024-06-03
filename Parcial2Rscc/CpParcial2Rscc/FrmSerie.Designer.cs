@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.pnlAcciones = new System.Windows.Forms.Panel();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -35,11 +36,10 @@
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtParametro = new System.Windows.Forms.TextBox();
-            this.dgvLista = new System.Windows.Forms.DataGridView();
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.lblParametro = new System.Windows.Forms.Label();
             this.lblSeries = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.lblSinopsis = new System.Windows.Forms.Label();
             this.lblDirector = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
@@ -52,14 +52,27 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDirector = new System.Windows.Forms.TextBox();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
             this.lblEstado = new System.Windows.Forms.Label();
+            this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
+            this.erpTitulo = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpSinopsis = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpDirector = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpEpisodios = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpFechaEstreno = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpEstado = new System.Windows.Forms.ErrorProvider(this.components);
+            this.dgvLista = new System.Windows.Forms.DataGridView();
             this.pnlAcciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEpisodios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).BeginInit();
             this.gbxDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTitulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpSinopsis)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDirector)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpEpisodios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpFechaEstreno)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpEstado)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlAcciones
@@ -70,97 +83,85 @@
             this.pnlAcciones.Controls.Add(this.btnNuevo);
             this.pnlAcciones.Location = new System.Drawing.Point(27, 332);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(1375, 72);
+            this.pnlAcciones.Size = new System.Drawing.Size(1241, 72);
             this.pnlAcciones.TabIndex = 12;
             // 
             // btnSalir
             // 
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Location = new System.Drawing.Point(919, 6);
+            this.btnSalir.Location = new System.Drawing.Point(891, 3);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(218, 59);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(690, 6);
+            this.btnEliminar.Location = new System.Drawing.Point(657, 3);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(188, 59);
             this.btnEliminar.TabIndex = 8;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(473, 4);
+            this.btnEditar.Location = new System.Drawing.Point(437, 2);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(167, 58);
             this.btnEditar.TabIndex = 7;
             this.btnEditar.Text = "Editar";
             this.btnEditar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnNuevo
             // 
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(212, 3);
+            this.btnNuevo.Location = new System.Drawing.Point(168, 0);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(201, 62);
             this.btnNuevo.TabIndex = 6;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnBuscar
             // 
             this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscar.Location = new System.Drawing.Point(1174, 70);
+            this.btnBuscar.Location = new System.Drawing.Point(1101, 70);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(207, 28);
+            this.btnBuscar.Size = new System.Drawing.Size(140, 28);
             this.btnBuscar.TabIndex = 10;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtParametro
             // 
-            this.txtParametro.Location = new System.Drawing.Point(490, 70);
+            this.txtParametro.Location = new System.Drawing.Point(425, 70);
             this.txtParametro.Name = "txtParametro";
             this.txtParametro.Size = new System.Drawing.Size(636, 22);
             this.txtParametro.TabIndex = 9;
-            // 
-            // dgvLista
-            // 
-            this.dgvLista.AllowUserToAddRows = false;
-            this.dgvLista.AllowUserToDeleteRows = false;
-            this.dgvLista.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLista.Location = new System.Drawing.Point(14, 21);
-            this.dgvLista.MultiSelect = false;
-            this.dgvLista.Name = "dgvLista";
-            this.dgvLista.ReadOnly = true;
-            this.dgvLista.RowHeadersWidth = 51;
-            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(1386, 157);
-            this.dgvLista.TabIndex = 0;
+            this.txtParametro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtParametro_KeyPress);
             // 
             // gbxLista
             // 
             this.gbxLista.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gbxLista.Controls.Add(this.dgvLista);
-            this.gbxLista.Location = new System.Drawing.Point(19, 107);
+            this.gbxLista.Location = new System.Drawing.Point(27, 107);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Size = new System.Drawing.Size(1386, 187);
+            this.gbxLista.Size = new System.Drawing.Size(1241, 210);
             this.gbxLista.TabIndex = 11;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Lista de Productos";
@@ -181,19 +182,19 @@
             this.lblSeries.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSeries.Location = new System.Drawing.Point(27, 9);
             this.lblSeries.Name = "lblSeries";
-            this.lblSeries.Size = new System.Drawing.Size(1364, 36);
+            this.lblSeries.Size = new System.Drawing.Size(1214, 36);
             this.lblSeries.TabIndex = 7;
             this.lblSeries.Text = "Series";
             this.lblSeries.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // lblCodigo
+            // lblTitulo
             // 
-            this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(8, 21);
-            this.lblCodigo.Name = "lblCodigo";
-            this.lblCodigo.Size = new System.Drawing.Size(43, 16);
-            this.lblCodigo.TabIndex = 0;
-            this.lblCodigo.Text = "Titulo:";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Location = new System.Drawing.Point(8, 21);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(43, 16);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Título:";
             // 
             // lblSinopsis
             // 
@@ -269,6 +270,7 @@
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -280,6 +282,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // txtDirector
             // 
@@ -303,23 +306,13 @@
             this.gbxDatos.Controls.Add(this.txtTitulo);
             this.gbxDatos.Controls.Add(this.lblDirector);
             this.gbxDatos.Controls.Add(this.lblSinopsis);
-            this.gbxDatos.Controls.Add(this.lblCodigo);
+            this.gbxDatos.Controls.Add(this.lblTitulo);
             this.gbxDatos.Location = new System.Drawing.Point(19, 441);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(1372, 221);
+            this.gbxDatos.Size = new System.Drawing.Size(1249, 221);
             this.gbxDatos.TabIndex = 13;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
-            // 
-            // dtpFechaEstreno
-            // 
-            this.dtpFechaEstreno.Enabled = false;
-            this.dtpFechaEstreno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaEstreno.Location = new System.Drawing.Point(968, 50);
-            this.dtpFechaEstreno.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpFechaEstreno.Name = "dtpFechaEstreno";
-            this.dtpFechaEstreno.Size = new System.Drawing.Size(139, 22);
-            this.dtpFechaEstreno.TabIndex = 16;
             // 
             // lblEstado
             // 
@@ -331,11 +324,60 @@
             this.lblEstado.Text = "Estado:";
             this.lblEstado.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // dtpFechaEstreno
+            // 
+            this.dtpFechaEstreno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaEstreno.Location = new System.Drawing.Point(968, 50);
+            this.dtpFechaEstreno.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaEstreno.Name = "dtpFechaEstreno";
+            this.dtpFechaEstreno.Size = new System.Drawing.Size(139, 22);
+            this.dtpFechaEstreno.TabIndex = 16;
+            // 
+            // erpTitulo
+            // 
+            this.erpTitulo.ContainerControl = this;
+            // 
+            // erpSinopsis
+            // 
+            this.erpSinopsis.ContainerControl = this;
+            // 
+            // erpDirector
+            // 
+            this.erpDirector.ContainerControl = this;
+            // 
+            // erpEpisodios
+            // 
+            this.erpEpisodios.ContainerControl = this;
+            // 
+            // erpFechaEstreno
+            // 
+            this.erpFechaEstreno.ContainerControl = this;
+            // 
+            // erpEstado
+            // 
+            this.erpEstado.ContainerControl = this;
+            // 
+            // dgvLista
+            // 
+            this.dgvLista.AllowUserToAddRows = false;
+            this.dgvLista.AllowUserToDeleteRows = false;
+            this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLista.Location = new System.Drawing.Point(6, 22);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvLista.MultiSelect = false;
+            this.dgvLista.Name = "dgvLista";
+            this.dgvLista.ReadOnly = true;
+            this.dgvLista.RowHeadersWidth = 51;
+            this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvLista.Size = new System.Drawing.Size(1228, 181);
+            this.dgvLista.TabIndex = 1;
+            // 
             // FrmSerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1447, 674);
+            this.ClientSize = new System.Drawing.Size(1297, 679);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.btnBuscar);
@@ -346,13 +388,20 @@
             this.Name = "FrmSerie";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "****************************FrmSerie*********************";
+            this.Load += new System.EventHandler(this.FrmSerie_Load);
             this.pnlAcciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.nudEpisodios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPrecioVenta)).EndInit();
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.erpTitulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpSinopsis)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpDirector)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpEpisodios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpFechaEstreno)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpEstado)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -366,11 +415,10 @@
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.TextBox txtParametro;
-        private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.GroupBox gbxLista;
         private System.Windows.Forms.Label lblParametro;
         private System.Windows.Forms.Label lblSeries;
-        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Label lblSinopsis;
         private System.Windows.Forms.Label lblDirector;
         private System.Windows.Forms.TextBox txtTitulo;
@@ -385,5 +433,12 @@
         private System.Windows.Forms.GroupBox gbxDatos;
         private System.Windows.Forms.DateTimePicker dtpFechaEstreno;
         private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.ErrorProvider erpTitulo;
+        private System.Windows.Forms.ErrorProvider erpSinopsis;
+        private System.Windows.Forms.ErrorProvider erpDirector;
+        private System.Windows.Forms.ErrorProvider erpEpisodios;
+        private System.Windows.Forms.ErrorProvider erpFechaEstreno;
+        private System.Windows.Forms.ErrorProvider erpEstado;
+        private System.Windows.Forms.DataGridView dgvLista;
     }
 }
