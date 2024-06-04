@@ -53,6 +53,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtDirector = new System.Windows.Forms.TextBox();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
             this.dtpFechaEstreno = new System.Windows.Forms.DateTimePicker();
             this.erpTitulo = new System.Windows.Forms.ErrorProvider(this.components);
@@ -61,6 +62,7 @@
             this.erpEpisodios = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpFechaEstreno = new System.Windows.Forms.ErrorProvider(this.components);
             this.erpEstado = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.pnlAcciones.SuspendLayout();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
@@ -183,13 +185,13 @@
             this.dgvLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.dgvLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLista.Location = new System.Drawing.Point(6, 38);
-            this.dgvLista.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvLista.Margin = new System.Windows.Forms.Padding(4);
             this.dgvLista.MultiSelect = false;
             this.dgvLista.Name = "dgvLista";
             this.dgvLista.ReadOnly = true;
             this.dgvLista.RowHeadersWidth = 51;
             this.dgvLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLista.Size = new System.Drawing.Size(1228, 165);
+            this.dgvLista.Size = new System.Drawing.Size(1209, 165);
             this.dgvLista.TabIndex = 1;
             // 
             // lblParametro
@@ -294,7 +296,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(372, 166);
+            this.btnGuardar.Location = new System.Drawing.Point(139, 154);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(162, 40);
             this.btnGuardar.TabIndex = 10;
@@ -309,7 +311,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(742, 166);
+            this.btnCancelar.Location = new System.Drawing.Point(515, 154);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(146, 40);
             this.btnCancelar.TabIndex = 14;
@@ -328,6 +330,8 @@
             // gbxDatos
             // 
             this.gbxDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.gbxDatos.Controls.Add(this.cbxCategoria);
+            this.gbxDatos.Controls.Add(this.lblCategoria);
             this.gbxDatos.Controls.Add(this.lblEstado);
             this.gbxDatos.Controls.Add(this.dtpFechaEstreno);
             this.gbxDatos.Controls.Add(this.txtDirector);
@@ -350,10 +354,20 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Location = new System.Drawing.Point(660, 109);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(103, 25);
+            this.lblCategoria.TabIndex = 21;
+            this.lblCategoria.Text = "Categoria:";
+            this.lblCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(658, 82);
+            this.lblEstado.Location = new System.Drawing.Point(660, 84);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(79, 25);
             this.lblEstado.TabIndex = 17;
@@ -364,7 +378,7 @@
             // 
             this.dtpFechaEstreno.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaEstreno.Location = new System.Drawing.Point(968, 50);
-            this.dtpFechaEstreno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechaEstreno.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaEstreno.Name = "dtpFechaEstreno";
             this.dtpFechaEstreno.Size = new System.Drawing.Size(174, 30);
             this.dtpFechaEstreno.TabIndex = 16;
@@ -393,12 +407,26 @@
             // 
             this.erpEstado.ContainerControl = this;
             // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "Terror",
+            "Ciencia Ficción",
+            "Anime"});
+            this.cbxCategoria.Location = new System.Drawing.Point(968, 119);
+            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(174, 33);
+            this.cbxCategoria.TabIndex = 22;
+            this.cbxCategoria.SelectedIndexChanged += new System.EventHandler(this.cbxCategoria_SelectedIndexChanged);
+            // 
             // FrmSerie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::CpParcial2Rscc.Properties.Resources.fondo;
-            this.ClientSize = new System.Drawing.Size(1283, 675);
+            this.ClientSize = new System.Drawing.Size(1316, 675);
             this.Controls.Add(this.gbxDatos);
             this.Controls.Add(this.pnlAcciones);
             this.Controls.Add(this.btnBuscar);
@@ -461,5 +489,7 @@
         private System.Windows.Forms.ErrorProvider erpFechaEstreno;
         private System.Windows.Forms.ErrorProvider erpEstado;
         private System.Windows.Forms.DataGridView dgvLista;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.ComboBox cbxCategoria;
     }
 }

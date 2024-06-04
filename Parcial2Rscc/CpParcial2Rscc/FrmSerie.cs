@@ -2,7 +2,6 @@
 using ClnParcial2Rscc;
 using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,6 +15,7 @@ namespace CpParcial2Rscc
         public FrmSerie()
         {
             InitializeComponent();
+            CargarCategorias();
         }
 
         private void FrmSerie_Load(object sender, EventArgs e)
@@ -24,17 +24,32 @@ namespace CpParcial2Rscc
             listar();
         }
 
+        private void CargarCategorias()
+        {
+            var categorias = new List<string>
+            {
+                "Ciencia ficción",
+                "Romance",
+                "Drama",
+                "Comedia",
+                "Acción"
+            };
+
+            cbxCategoria.DataSource = categorias;
+        }
+
         private void listar()
         {
             var lista = SerieCln.ListarPa(txtParametro.Text.Trim());
             dgvLista.DataSource = lista;
             dgvLista.Columns["id"].Visible = false;
-            dgvLista.Columns["estado"].Visible = false; 
+            dgvLista.Columns["estado"].Visible = false;
             dgvLista.Columns["titulo"].HeaderText = "Título";
             dgvLista.Columns["sinopsis"].HeaderText = "Sinopsis";
             dgvLista.Columns["director"].HeaderText = "Director";
             dgvLista.Columns["episodios"].HeaderText = "Episodios";
             dgvLista.Columns["fecha_estreno"].HeaderText = "Fecha de Estreno";
+            dgvLista.Columns["categoria"].HeaderText = "Categoría"; 
             btnEditar.Enabled = lista.Count > 0;
             btnEliminar.Enabled = lista.Count > 0;
             if (lista.Count > 0) dgvLista.Rows[0].Cells["titulo"].Selected = true;
@@ -55,11 +70,15 @@ namespace CpParcial2Rscc
             int index = dgvLista.CurrentCell.RowIndex;
             int id = Convert.ToInt32(dgvLista.Rows[index].Cells["id"].Value);
             var serie = SerieCln.ObtenerUno(id);
-            txtTitulo.Text = serie.titulo;
-            txtSinopsis.Text = serie.sinopsis;
-            txtDirector.Text = serie.director;
-            nudEpisodios.Value = serie.episodios ?? 0;
-            dtpFechaEstreno.Value = serie.fecha_estreno ?? DateTime.Now; // Manejar el valor nulo
+            if (serie != null)
+            {
+                txtTitulo.Text = serie.titulo;
+                txtSinopsis.Text = serie.sinopsis;
+                txtDirector.Text = serie.director;
+                nudEpisodios.Value = serie.episodios ?? 0;
+                dtpFechaEstreno.Value = serie.fecha_estreno ?? DateTime.Now;
+                cbxCategoria.SelectedItem = serie.categoria ?? "";
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -85,7 +104,6 @@ namespace CpParcial2Rscc
             erpSinopsis.SetError(txtSinopsis, "");
             erpDirector.SetError(txtDirector, "");
             erpEpisodios.SetError(nudEpisodios, "");
-            erpFechaEstreno.SetError(dtpFechaEstreno, "");
 
             if (string.IsNullOrEmpty(txtTitulo.Text))
             {
@@ -107,11 +125,11 @@ namespace CpParcial2Rscc
                 esValido = false;
                 erpEpisodios.SetError(nudEpisodios, "El campo Episodios debe ser mayor a 0");
             }
-
-            if (dtpFechaEstreno.Value < DateTime.Now.Date)
+            if (cbxCategoria.SelectedItem == null)
             {
                 esValido = false;
-                erpFechaEstreno.SetError(dtpFechaEstreno, "La fecha de estreno no puede ser en el pasado");
+                MessageBox.Show("Debe seleccionar una categoría", "::: Mensaje :::",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
             return esValido;
@@ -121,13 +139,16 @@ namespace CpParcial2Rscc
         {
             if (validar())
             {
-                var serie = new Serie();
-                serie.titulo = txtTitulo.Text.Trim();
-                serie.sinopsis = txtSinopsis.Text.Trim();
-                serie.director = txtDirector.Text.Trim();
-                serie.episodios = (int)nudEpisodios.Value;
-                serie.fecha_estreno = dtpFechaEstreno.Value;
-                serie.estado = 1;
+                var serie = new Serie
+                {
+                    titulo = txtTitulo.Text.Trim(),
+                    sinopsis = txtSinopsis.Text.Trim(),
+                    director = txtDirector.Text.Trim(),
+                    episodios = (int)nudEpisodios.Value,
+                    fecha_estreno = dtpFechaEstreno.Value,
+                    categoria = cbxCategoria.SelectedItem.ToString(),
+                    estado = 1
+                };
 
                 if (esNuevo)
                 {
@@ -153,6 +174,7 @@ namespace CpParcial2Rscc
             txtDirector.Text = string.Empty;
             nudEpisodios.Value = 0;
             dtpFechaEstreno.Value = DateTime.Now;
+            cbxCategoria.SelectedIndex = -1;
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -170,9 +192,15 @@ namespace CpParcial2Rscc
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void cbxCategoria_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

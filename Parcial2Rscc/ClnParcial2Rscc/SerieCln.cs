@@ -29,6 +29,7 @@ namespace ClnParcial2Rscc
                     existente.director = serie.director;
                     existente.episodios = serie.episodios;
                     existente.fecha_estreno = serie.fecha_estreno;
+                    existente.categoria = serie.categoria;
                     existente.estado = serie.estado;
                     return context.SaveChanges();
                 }

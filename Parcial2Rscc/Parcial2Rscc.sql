@@ -28,7 +28,8 @@ CREATE TABLE Serie (
     sinopsis VARCHAR(5000),
     director VARCHAR(100),
     episodios INT,
-    fecha_estreno DATE
+    fecha_estreno DATE,
+    categoria VARCHAR(50)
 );
 GO
 
@@ -36,22 +37,20 @@ GO
 ALTER TABLE Serie ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1: Eliminado, 0: Inactivo, 1: Activo
 GO
 
--- Crear el procedimiento para listar todas las series con un parámetro de búsqueda
-CREATE PROCEDURE paSerieListar 
-    @parametro VARCHAR(50)
+CREATE PROCEDURE paSerieListar
+    @parametro NVARCHAR(100)
 AS
 BEGIN
-    SELECT id, titulo, sinopsis, director, episodios, fecha_estreno,estado
+    SELECT id, titulo, sinopsis, director, episodios, fecha_estreno, categoria, estado
     FROM Serie
-    WHERE estado <> -1 AND titulo LIKE '%' + REPLACE(@parametro, ' ', '%') + '%';
+    WHERE (titulo LIKE '%' + @parametro + '%' OR sinopsis LIKE '%' + @parametro + '%')
+    AND estado != -1
+    ORDER BY titulo
 END
-GO
-
 -- Insertar datos de ejemplo en la tabla Serie
-INSERT INTO Serie (titulo, sinopsis, director, episodios, fecha_estreno,estado)
+INSERT INTO Serie (titulo, sinopsis, director, episodios, fecha_estreno, categoria, estado)
 VALUES
-('Inception', 'Sueños', 'Christopher Nolan', 1, '2010-07-16',1),
-('Titanic', 'Romance', 'James Cameron', 1, '1997-12-19',1),
-('Avatar', 'Pandora', 'James Cameron', 1, '2009-12-18',1),
-('Interstellar', 'Espacio', 'Christopher Nolan', 1, '2014-11-07',1);
+('Titanic', 'Romance', 'James Cameron', 1, '1997-12-19', 'Romance', 1),
+('Avatar', 'Pandora', 'James Cameron', 1, '2009-12-18', 'Ciencia ficción', 1)
+
 GO
